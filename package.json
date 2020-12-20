@@ -1,0 +1,49 @@
+{
+  "name": "sea-design",
+  "version": "1.0.0",
+  "description": "An enterprise-class UI design language and React components implementation",
+  "keywords": [
+    "sea",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "bugs": {
+    "url": "https://github.com/sea-design/sea-design/issues"
+  },
+  "source": "components/index.tsx",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/antd.min.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "start": "microbundle-crl watch --no-compress --format modern,cjs"
+  },
+  "repository": "https://github.com/sea-design/sea-design",
+  "author": "Edward Elric <SASUKE688848@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.19",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "jest": "^26.6.3",
+    "microbundle-crl": "^0.13.11",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.3"
+  }
+}
