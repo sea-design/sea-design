@@ -13,6 +13,7 @@ export interface ButtonProps extends BaseProps {
 export const Button = ({ size = 'default', type = 'primary', children, onClick }: ButtonProps) => {
   const className = classnames('text-white', 'rounded', {
     'bg-blue-500': type === 'primary',
+    'bg-blue-400': type === 'secondary',
     'bg-gray-500': type === 'tertiary',
     'bg-yellow-500': type === 'warning',
     'bg-red-500': type === 'danger',
