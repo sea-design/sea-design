@@ -4,6 +4,7 @@ node_modules
 # builds
 build
 dist
+docs
 
 # misc
 .DS_Store
