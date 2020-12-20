@@ -22,9 +22,9 @@
   "unpkg": "dist/antd.min.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "microbundle watch --no-compress --format modern,cjs",
     "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs"
+    "build": "microbundle watch --no-compress --format modern,cjs",
+    "docs": "build-storybook -o docs"
   },
   "repository": "https://github.com/sea-design/sea-design",
   "author": "Edward Elric <SASUKE688848@gmail.com>",
