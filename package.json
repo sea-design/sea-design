@@ -24,7 +24,7 @@
   "scripts": {
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs"
   },
   "repository": "https://github.com/sea-design/sea-design",
   "author": "Edward Elric <SASUKE688848@gmail.com>",
