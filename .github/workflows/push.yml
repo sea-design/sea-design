@@ -27,5 +27,5 @@ jobs:
             git add .
             git commit
             git remote add origin https://${{ secrets.CI_PAGE_PUSH_USERNAME }}:{{ secrets.CI_PUSH_PAGE_TOKEN }}@github.com/sea-design/sea-design.github.io.git
-            git push -f origin master
+            git push -f origin main
 
