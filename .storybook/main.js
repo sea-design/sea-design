@@ -1,11 +1,10 @@
-const path = require('path');
 module.exports = {
-  "stories": [
+  logLevel: 'debug',
+  stories: [
     "../components/**/*.stories.@(tsx|mdx)"
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-viewport"
+    "@storybook/addon-essentials"
   ]
 }
