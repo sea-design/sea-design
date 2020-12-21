@@ -2,12 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "sea-design": [
-        "components/index.tsx"
-      ],
-      "sea-design/es/*": [
-        "components/*"
-      ]
+      "sea-design": ["components/index.tsx"],
+      "sea-design/es/*": ["components/*"]
     },
     "strictNullChecks": true,
     "moduleResolution": "node",
@@ -18,15 +14,8 @@
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "target": "es6",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "skipLibCheck": true
   },
-  "exclude": [
-    "node_modules",
-    "lib",
-    "es"
-  ]
+  "exclude": ["node_modules", "lib", "es"]
 }

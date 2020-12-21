@@ -24,7 +24,8 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "microbundle watch --no-compress --format modern,cjs",
-    "docs": "build-storybook -o docs"
+    "docs": "build-storybook -o docs",
+    "lint": "prettier --write ."
   },
   "repository": "https://github.com/sea-design/sea-design",
   "author": "Edward Elric <SASUKE688848@gmail.com>",
@@ -49,10 +50,13 @@
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.2",
     "classnames": "^2.2.6",
+    "husky": ">=4",
     "jest": "^26.6.3",
+    "lint-staged": ">=10",
     "microbundle": "^0.12.4",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
+    "prettier": "2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "ts-jest": "^26.4.4",
@@ -65,5 +69,13 @@
     "@emotion/styled-base": "^11.0.0",
     "tailwindcss": "^2.0.2",
     "twin.macro": "^2.0.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,css,md}": "prettier --write ."
   }
 }
