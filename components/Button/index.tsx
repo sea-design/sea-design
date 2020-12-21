@@ -2,8 +2,8 @@ import * as React from 'react';
 import { BaseProps } from '../_base/type';
 import tw, { css, styled, theme } from 'twin.macro';
 
-export type Size = 'default' | 'small' | 'large';
-export type Type = 'primary' | 'secondary' | 'tertiary' | 'warning' | 'danger';
+type Size = 'default' | 'small' | 'large';
+type Type = 'primary' | 'secondary' | 'tertiary' | 'warning' | 'danger';
 export interface ButtonProps extends BaseProps {
   size?: Size;
   type?: Type;

@@ -1,3 +1,2 @@
-import 'index.';
-export * from './avatar';
-export * from './button';
+export * from './Avatar';
+export * from './Button';
