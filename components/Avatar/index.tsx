@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {BaseProps} from '../_base/type';
 import classnames from 'classnames';
 

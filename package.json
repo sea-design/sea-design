@@ -17,13 +17,14 @@
     "url": "https://github.com/sea-design/sea-design/issues"
   },
   "source": "components/index.tsx",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "unpkg": "dist/antd.min.js",
-  "typings": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "esmodule": "dist/index.modern.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "microbundle watch --no-compress --format modern,cjs",
+    "build": "microbundle",
     "docs": "build-storybook -o docs",
     "lint": "prettier --write ."
   },
@@ -63,12 +64,19 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
     "@emotion/styled-base": "^11.0.0",
+    "babel-plugin-macros": "^3.0.1",
     "tailwindcss": "^2.0.2",
     "twin.macro": "^2.0.7"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
   },
   "husky": {
     "hooks": {

@@ -1,9 +1,12 @@
-import * as React from 'react';
 import {BaseProps} from '../_base/type';
-import tw, {css, styled, theme} from 'twin.macro';
+import {css} from '@emotion/react';
+import styled from '@emotion/styled';
+import tw, {theme} from 'twin.macro';
+import {FC} from 'react';
 
 type Size = 'default' | 'small' | 'large';
 type Type = 'primary' | 'secondary' | 'tertiary' | 'warning' | 'danger';
+
 export interface ButtonProps extends BaseProps {
   size?: Size;
   type?: Type;
@@ -24,7 +27,7 @@ const TYPE = {
   danger: tw`bg-red-500`,
 };
 
-export const Button: React.FC<ButtonProps> = styled.button(
+export const Button: FC<ButtonProps> = styled.button(
   ({size = 'default', type = 'primary'}: ButtonProps) => [
     tw`text-white rounded`,
     TYPE[type],
