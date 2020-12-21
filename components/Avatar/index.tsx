@@ -1,23 +1,41 @@
 import * as React from 'react';
 import {BaseProps} from '../_base/type';
-import classnames from 'classnames';
+import tw, {styled} from 'twin.macro';
 
-export type Size = 'default' | 'small' | 'large';
+type Size = 'default' | 'small' | 'large';
+type Shape = 'square' | 'rounded';
 
 export interface AvatarProps extends BaseProps {
+  shape?: Shape;
   size?: Size;
-  url?: string;
+  src?: string;
 }
 
-export const Avatar = ({size = 'default', url}: AvatarProps) => {
-  const classname = classnames({
-    'h-6 w-6': size === 'small',
-    'h-8 w-8': size === 'default',
-    'h-10 w-10': size === 'large',
-  });
+const SIZE = {
+  default: tw`h-8 w-8 `,
+  small: tw`h-6 w-6`,
+  large: tw`h-10 w-10`,
+};
+
+const SHAPE = {
+  square: tw`rounded-none`,
+  rounded: tw`rounded-full`,
+};
+
+const AvatarSpan = styled.span(
+  ({shape = 'square', size = 'default'}: AvatarProps) => [
+    SHAPE[shape],
+    SIZE[size],
+  ]
+);
+export const Avatar: React.FC<AvatarProps> = ({
+  shape,
+  size,
+  src,
+}: AvatarProps) => {
   return (
-    <div className={classname}>
-      <img src={url} />
-    </div>
+    <AvatarSpan shape={shape} size={size}>
+      <img src={src} />
+    </AvatarSpan>
   );
 };

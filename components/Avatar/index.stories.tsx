@@ -9,16 +9,26 @@ export default {
 
 const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
 
+export const Default = Template.bind({});
+Default.args = {
+  shape: 'rounded',
+  size: 'default',
+  src:
+    'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+};
+
 export const Large = Template.bind({});
 Large.args = {
+  shape: 'rounded',
   size: 'large',
-  url:
+  src:
     'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 };
 
 export const Small = Template.bind({});
 Small.args = {
+  shape: 'rounded',
   size: 'small',
-  url:
+  src:
     'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 };
