@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {BaseProps} from '../_base/type';
 import tw, {styled} from 'twin.macro';
 
@@ -21,7 +22,7 @@ const SHAPE = {
   rounded: tw`rounded-full`,
 };
 
-const AvatarSpan = styled.span(
+const AvatarSpan: React.FC<AvatarProps> = styled.div(
   ({shape = 'square', size = 'default'}: AvatarProps) => [
     SHAPE[shape],
     SIZE[size],
