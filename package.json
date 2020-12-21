@@ -36,6 +36,11 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@storybook/addon-actions": "^6.1.11",
@@ -58,7 +63,10 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
+    "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.2",
+    "@emotion/styled": "^11.0.0",
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.2",
     "twin.macro": "^2.0.7"
