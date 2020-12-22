@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {BaseProps} from '../_base/type';
-import tw, {styled} from 'twin.macro';
+import tw, {css, styled} from 'twin.macro';
 
 type Size = 'default' | 'small' | 'large';
 type Shape = 'square' | 'rounded';
@@ -26,6 +26,9 @@ const AvatarSpan: React.FC<AvatarProps> = styled.div(
   ({shape = 'square', size = 'default'}: AvatarProps) => [
     SHAPE[shape],
     SIZE[size],
+    css`
+      overflow: hidden;
+    `,
   ]
 );
 export const Avatar: React.FC<AvatarProps> = ({
