@@ -4,6 +4,8 @@
 
 ## ⌨️ Development
 
+This will open a development server on port 6006.
+
 ```bash
 $ git clone git@github.com:sea-design/sea-design.git
 $ cd sea-design
@@ -17,4 +19,4 @@ $ yarn start
 $ yarn docs
 ```
 
-Commit `docs` folder and view site https://sea-design.github.io/sea-design/
+Commit `docs` folder and view site https://sea-design.github.io/
