@@ -32,7 +32,7 @@ const isError = (error: boolean) => {
 const Inputstyled = styled.input(
   ({disabled = false, iserror = false}: InputProps) => [
     isDisabled(disabled),
-    tw`border-gray-400 border rounded-lg p-2 px-3`,
+    tw`border-gray-400 border rounded-lg p-2 px-3 focus:outline-none focus:ring focus:border-blue-300`,
     isError(iserror),
   ]
 );
@@ -46,6 +46,7 @@ export const Input: FC<InputProps> = ({
     <Inputstyled
       placeholder={PlaceHolder}
       disabled={disabled}
-      iserror={iserror}></Inputstyled>
+      iserror={iserror}
+    />
   );
 };
