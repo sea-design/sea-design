@@ -6,6 +6,8 @@ import tw from 'twin.macro';
 
 export interface InputProps extends BaseProps {
   disabled?: boolean;
+  PlaceHolder?: string;
+  iserror?: boolean;
 }
 
 const isDisabled = (disabled: boolean) => {
@@ -18,9 +20,32 @@ const isDisabled = (disabled: boolean) => {
   );
 };
 
-export const Input: FC<InputProps> = styled.input(
-  ({disabled = false}: InputProps) => [
+const isError = (error: boolean) => {
+  return (
+    error &&
+    tw`
+    border-red-400
+    `
+  );
+};
+
+const Inputstyled = styled.input(
+  ({disabled = false, iserror = false}: InputProps) => [
     isDisabled(disabled),
-    tw`border-gray-400 border rounded-lg p-1`,
+    tw`border-gray-400 border rounded-lg p-2 px-3`,
+    isError(iserror),
   ]
 );
+
+export const Input: FC<InputProps> = ({
+  disabled = false,
+  PlaceHolder = '',
+  iserror = false,
+}: InputProps) => {
+  return (
+    <Inputstyled
+      placeholder={PlaceHolder}
+      disabled={disabled}
+      iserror={iserror}></Inputstyled>
+  );
+};
