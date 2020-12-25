@@ -54,7 +54,7 @@
     "husky": ">=4",
     "jest": "^26.6.3",
     "lint-staged": ">=10",
-    "microbundle": "^0.12.4",
+    "microbundle": "^0.13.0",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
     "prettier": "2.2.1",
@@ -66,7 +66,7 @@
   "dependencies": {
     "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
     "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.1.2",
+    "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "@emotion/styled-base": "^11.0.0",
     "babel-plugin-macros": "^3.0.1",
