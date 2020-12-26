@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {BaseProps} from '../_base/type';
-import tw, {css, styled} from 'twin.macro';
+import {css} from '@emotion/react';
+import styled from '@emotion/styled';
+import tw from 'twin.macro';
 
 type Size = 'default' | 'small' | 'large';
 type Shape = 'square' | 'rounded';
