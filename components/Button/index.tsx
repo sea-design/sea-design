@@ -14,9 +14,9 @@ export interface ButtonProps extends BaseProps {
 }
 
 const SIZE = {
-  default: tw`py-3 px-6`,
+  default: tw`py-2 px-2`,
   small: tw`py-1 px-1`,
-  large: tw`py-4 px-7`,
+  large: tw`py-3 px-3`,
 };
 
 const TYPE = {
