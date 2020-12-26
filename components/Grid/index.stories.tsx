@@ -20,6 +20,16 @@ export const Default = (args: GridProps) => (
   </Grid>
 );
 
+export const ItemRowCol = (args: GridProps) => (
+  <Grid container rows={6} style={containerStyle}>
+    <Grid item col={{start: 3, end: 6}} row={{start: 3, end: 5}} {...args}>
+      <div tw="bg-blue-500 text-white flex items-center justify-center font-mono rounded w-full h-full">
+        col: 3-6 row: 3-5
+      </div>
+    </Grid>
+  </Grid>
+);
+
 export const ColSpan4 = (args: GridProps) => (
   <Grid container rows={6} style={containerStyle}>
     <Grid item col={{span: 4}} {...args}>
