@@ -44,7 +44,7 @@ const RING_COLOR = {
 
 export const Button: FC<ButtonProps> = styled.button(
   ({size = 'default', type = 'primary', ring = false}: ButtonProps) => [
-    tw`text-white rounded transition-all`,
+    tw`text-white rounded transition-all focus:outline-none focus:ring`,
     TYPE[type],
     SIZE[size],
     RING_COLOR[type],
