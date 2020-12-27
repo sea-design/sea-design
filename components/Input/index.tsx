@@ -8,6 +8,7 @@ export interface InputProps extends BaseProps {
   disabled?: boolean;
   PlaceHolder?: string;
   iserror?: boolean;
+  name?: string;
 }
 
 const isDisabled = (disabled: boolean) => {
@@ -41,12 +42,14 @@ export const Input: FC<InputProps> = ({
   disabled = false,
   PlaceHolder = '',
   iserror = false,
+  name = '',
 }: InputProps) => {
   return (
     <Inputstyled
       placeholder={PlaceHolder}
       disabled={disabled}
       iserror={iserror}
+      name={name}
     />
   );
 };
