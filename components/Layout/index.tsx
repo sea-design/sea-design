@@ -83,7 +83,7 @@ export const Layout = (props: any) => {
           },
         },
       }}>
-      <BsicLayout hasSider={!!(siders.length > 0)}>{children}</BsicLayout>
+      <BsicLayout hasSider={siders.length > 0}>{children}</BsicLayout>
     </LayoutContext.Provider>
   );
 };
