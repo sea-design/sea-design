@@ -1,4 +1,5 @@
 import {FC} from 'react';
+
 import tw, {styled} from 'twin.macro';
 
 import {ProgressProps, Size} from './index';

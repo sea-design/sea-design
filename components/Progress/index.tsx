@@ -9,6 +9,7 @@ export type Size = 'default' | 'small';
 
 type ProgressType = 'line' | 'circle' | 'dashboard';
 type ProgressStatus = 'success' | 'exception' | 'normal' | 'active';
+
 type StringGradients = {[percentage: string]: string};
 type FromToGradients = {from: string; to: string};
 type ProgressGradients = {direction?: string} & (
