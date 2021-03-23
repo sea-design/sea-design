@@ -1,5 +1,5 @@
-import React, {CSSProperties, FC, ReactNode} from 'react';
-import tw, {css, styled} from 'twin.macro';
+import React, {FC, ReactNode} from 'react';
+import tw, {styled} from 'twin.macro';
 
 import {ProgressProps} from './index';
 import {validProgress} from './utils';
@@ -8,7 +8,7 @@ export interface LineProps extends ProgressProps {
   children: ReactNode;
 }
 
-// TODO surport  Gradient color
+// TODO support  Gradient color
 export const sortGradient = () => {};
 
 export const handleGradient = () => {};

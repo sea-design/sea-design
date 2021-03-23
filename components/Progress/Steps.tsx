@@ -41,7 +41,9 @@ export const Steps: FC<StepsProps> = (props) => {
 
   const styledSteps = [];
   for (let i = 0; i < steps; i++) {
-    styledSteps.push(i <= current - 1 ? <StrokeItem /> : <TrailItem />);
+    styledSteps.push(
+      i <= current - 1 ? <StrokeItem key={i} /> : <TrailItem key={i} />
+    );
   }
 
   return (
