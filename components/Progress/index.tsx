@@ -101,7 +101,7 @@ export const Progress: FC<ProgressProps> = ({
       );
     } else if (type === 'circle' || type === 'dashboard') {
       progress = (
-        <Circle {...props} status={progressStatus}>
+        <Circle {...props} progressStatus={progressStatus}>
           {progressInfo}
         </Circle>
       );

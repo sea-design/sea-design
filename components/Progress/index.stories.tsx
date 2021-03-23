@@ -28,21 +28,21 @@ export const SmallLine = () => (
   </>
 );
 
-// export const Circle = () => (
-//   <>
-//     <Progress type='circle' percent={75} />
-//     <Progress type='circle' percent={70} status='exception' />
-//     <Progress type='circle' percent={100} />
-//   </>
-// );
+export const Circle = () => (
+  <>
+    <Progress type="circle" percent={75} />
+    <Progress type="circle" percent={70} status="exception" />
+    <Progress type="circle" percent={100} />
+  </>
+);
 
-// export const SmallCircle = () => (
-//   <>
-//     <Progress type='circle' percent={30} width={80} />
-//     <Progress type='circle' percent={70} width={80} status='exception' />
-//     <Progress type='circle' percent={100} width={80} />
-//   </>
-// );
+export const SmallCircle = () => (
+  <>
+    <Progress type="circle" percent={30} width={80} />
+    <Progress type="circle" percent={70} width={80} status="exception" />
+    <Progress type="circle" percent={100} width={80} />
+  </>
+);
 
 // export const DynamicLine = () => {
 
