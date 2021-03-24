@@ -47,14 +47,14 @@ export const InputNumber: FC<InputNumberProps> = ({
     }
     return inputStyles;
   };
-  const StyledInputNumer = styled.input(() => [
+  const StyledInputNumber = styled.input(() => [
     tw`border-2`,
     tw`rounded`,
     styles(),
   ]);
 
   return (
-    <StyledInputNumer
+    <StyledInputNumber
       type="number"
       min={min}
       max={max}
