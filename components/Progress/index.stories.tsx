@@ -28,21 +28,21 @@ export const SmallLine = () => (
   </>
 );
 
-// export const Circle = () => (
-//   <>
-//     <Progress type='circle' percent={75} />
-//     <Progress type='circle' percent={70} status='exception' />
-//     <Progress type='circle' percent={100} />
-//   </>
-// );
+export const Circle = () => (
+  <>
+    <Progress type="circle" percent={75} />
+    <Progress type="circle" percent={70} status="exception" />
+    <Progress type="circle" percent={100} />
+  </>
+);
 
-// export const SmallCircle = () => (
-//   <>
-//     <Progress type='circle' percent={30} width={80} />
-//     <Progress type='circle' percent={70} width={80} status='exception' />
-//     <Progress type='circle' percent={100} width={80} />
-//   </>
-// );
+export const SmallCircle = () => (
+  <>
+    <Progress type="circle" percent={30} width={80} />
+    <Progress type="circle" percent={70} width={80} status="exception" />
+    <Progress type="circle" percent={100} width={80} />
+  </>
+);
 
 // export const DynamicLine = () => {
 
@@ -74,15 +74,15 @@ export const SmallLine = () => (
 //   </>
 // );
 
-// export const Steps = () => (
-//   <>
-//     <Progress percent={50} steps={3} />
-//     <br />
-//     <Progress percent={30} steps={5} />
-//     <br />
-//     <Progress percent={100} steps={5} size='small' strokeColor='#52c41a' />
-//   </>
-// );
+export const Steps = () => (
+  <>
+    <Progress percent={50} steps={3} />
+    <br />
+    <Progress percent={30} steps={5} />
+    <br />
+    <Progress percent={100} steps={5} size="small" strokeColor="#52c41a" />
+  </>
+);
 
 // export const LinearGradient = () => (
 //   <>

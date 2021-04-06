@@ -5,9 +5,11 @@ import {Steps} from './Steps';
 import {Circle} from './Circle';
 import {Line} from './Line';
 
+export type Size = 'default' | 'small';
+
 type ProgressType = 'line' | 'circle' | 'dashboard';
 type ProgressStatus = 'success' | 'exception' | 'normal' | 'active';
-type Size = 'default' | 'small';
+
 type StringGradients = {[percentage: string]: string};
 type FromToGradients = {from: string; to: string};
 type ProgressGradients = {direction?: string} & (
@@ -42,7 +44,7 @@ export const Progress: FC<ProgressProps> = ({
   type = 'line',
   percent = 0,
   showInfo = true,
-  trailColor = '',
+  trailColor = '#F3F3F3',
   size = 'default',
   gapDegree = undefined,
   strokeLinecap = 'round',
@@ -99,7 +101,7 @@ export const Progress: FC<ProgressProps> = ({
       );
     } else if (type === 'circle' || type === 'dashboard') {
       progress = (
-        <Circle {...props} status={progressStatus}>
+        <Circle {...props} progressStatus={progressStatus}>
           {progressInfo}
         </Circle>
       );
