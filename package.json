@@ -40,10 +40,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@storybook/addon-actions": "^6.1.11",
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/addon-links": "^6.1.11",
-    "@storybook/react": "^6.1.11",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@types/classnames": "^2.2.11",
     "@types/jest": "^26.0.19",
     "@types/react": "^17.0.0",
@@ -70,8 +70,8 @@
     "@emotion/styled": "^11.0.0",
     "@emotion/styled-base": "^11.0.0",
     "babel-plugin-macros": "^3.0.1",
-    "tailwindcss": "^2.0.2",
-    "twin.macro": "^2.0.7"
+    "tailwindcss": "^2.1.2",
+    "twin.macro": "^2.4.0"
   },
   "babelMacros": {
     "twin": {
