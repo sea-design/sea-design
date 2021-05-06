@@ -4,7 +4,7 @@ import {Meta} from '@storybook/react/types-6-0';
 import 'twin.macro';
 
 export default {
-  title: 'Layout/Layout',
+  title: 'Basic/Layout',
   component: Layout,
 } as Meta;
 
