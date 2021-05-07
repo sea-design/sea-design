@@ -1,6 +1,6 @@
 import React, {FC, CSSProperties, ReactNode, useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import tw, {styled, css} from 'twin.macro';
+import tw, {styled} from 'twin.macro';
 
 type NotificationPlacement =
   | 'topLeft'
@@ -68,9 +68,15 @@ export const NotifyContainer = () => {
   add = (notice) => {
     setNotices((prevNotices) => [...prevNotices, notice]);
 
-    setTimeout(() => {
-      remove(notice);
-    }, 4500);
+    if (notice.duration && notice.duration > 0) {
+      setTimeout(() => {
+        remove(notice);
+      }, notice.duration || 4500);
+    } else if (!notice.duration && notice.duration !== 0) {
+      setTimeout(() => {
+        remove(notice);
+      }, 4500);
+    }
   };
 
   useEffect(() => {
@@ -83,7 +89,14 @@ export const NotifyContainer = () => {
     <div>
       {notices.map((props) => {
         const {id, ...rest} = props;
-        return <NotifyItem key={props.id} {...rest}></NotifyItem>;
+        return (
+          <NotifyItem
+            key={props.id}
+            {...rest}
+            onClose={() => {
+              remove(props);
+            }}></NotifyItem>
+        );
       })}
     </div>
   );
@@ -147,12 +160,22 @@ const Item = styled.div((props: NotificationProps) => [
   tw`max-w-xs rounded mb-2 text-white `,
 ]);
 const NotifyItem: FC<NotificationProps> = (props) => {
-  const {showClose = true} = props;
+  const {showClose = true, onClose} = props;
   return (
     <Item {...props}>
       <div tw="flex">
         <h3 tw="flex-1 font-medium text-xl">{props.title}</h3>
-        {showClose ? <div tw="flex-none mr-2">x</div> : null}
+        {showClose ? (
+          <div
+            tw="flex-none mr-2"
+            onClick={() => {
+              if (onClose) {
+                onClose();
+              }
+            }}>
+            x
+          </div>
+        ) : null}
       </div>
       <div tw="font-normal">{props.message}</div>
       {props.children}
