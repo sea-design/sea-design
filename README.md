@@ -1,6 +1,6 @@
 # Sea Design
 
-🌊 An enterprise-class UI design language and React UI library.
+🌊 An UI design language and React UI library.
 
 ## ⌨️ Development
 
