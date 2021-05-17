@@ -10,7 +10,7 @@ export default {
 
 export const Default = () => (
   <>
-    <Tag>tag</Tag>
+    <Tag shape="rounded">tag</Tag>
     <Tag color="red" visible={true} closable={true}>
       red
     </Tag>
@@ -19,7 +19,9 @@ export const Default = () => (
     <Tag color="orange">orange</Tag>
     <Tag color="cyan">cyan</Tag>
     <Tag color="purple">purple</Tag>
-    <Tag color="green">green</Tag>
+    <Tag color="green" shape={'rounded'}>
+      green
+    </Tag>
   </>
 );
 
