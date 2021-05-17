@@ -60,7 +60,9 @@ export const Line: FC<LineProps> = (props) => {
     percentStyle(),
   ]);
 
-  const TrialColor = trailColor ? {color: trailColor} : tw`bg-gray-200`;
+  const TrialColor = trailColor
+    ? {backgroundColor: trailColor}
+    : tw`bg-gray-200`;
 
   const StyledTrail = styled.div(() => [
     tw`w-full`,
