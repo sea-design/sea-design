@@ -13,6 +13,8 @@ type PresetColorTypes =
   | 'blue'
   | 'purple';
 
+type Shape = 'rounded' | 'square';
+
 const presetColorMap = {
   pink: tw`bg-pink-300`,
   red: tw`bg-red-300`,
@@ -31,6 +33,7 @@ export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
   onClose?: (e: React.MouseEvent<HTMLElement>) => void;
   style?: React.CSSProperties;
   icon?: React.ReactNode;
+  shape?: Shape;
 }
 
 export interface TagType
@@ -69,7 +72,11 @@ const InternalTag: React.ForwardRefRenderFunction<HTMLSpanElement, TagProps> = (
 
   const renderCloseIcon = () => {
     if (closable) {
-      return <span onClick={handleCloseClick}>x</span>;
+      return (
+        <span onClick={handleCloseClick} tw="m-1">
+          x
+        </span>
+      );
     }
     return null;
   };
@@ -100,12 +107,16 @@ const InternalTag: React.ForwardRefRenderFunction<HTMLSpanElement, TagProps> = (
 const getVisible = (visible: boolean) => {
   return visible ? tw`inline` : tw`hidden`;
 };
-
-const StyleTag = styled.span(({color = 'blue', visible = true}: TagProps) => [
-  presetColorMap[color],
-  getVisible(visible),
-  tw`cursor-pointer`,
-]);
+const getShape = (shape: Shape) =>
+  shape === 'rounded' ? tw`rounded-full` : tw`rounded-none`;
+const StyleTag = styled.span(
+  ({color = 'blue', visible = true, shape = 'square'}: TagProps) => [
+    presetColorMap[color],
+    getVisible(visible),
+    getShape(shape),
+    tw`cursor-pointer p-1 m-1`,
+  ]
+);
 
 const Tag = React.forwardRef<unknown, TagProps>(InternalTag) as TagType;
 
