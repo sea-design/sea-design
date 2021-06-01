@@ -21,7 +21,7 @@ export const TabTitle: FC<TabTitleProps> = (props) => {
   };
 
   const StyledTitle = styled.span((props: TabTitleProps) => [
-    tw` h-8 p-3 flex justify-center text-center items-center hover:cursor-pointer`,
+    tw` h-8 p-2 justify-center text-center items-center hover:cursor-pointer`,
     isActive(props.currentActive, props.index),
   ]);
 
