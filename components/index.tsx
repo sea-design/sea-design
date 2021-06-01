@@ -11,7 +11,7 @@ export * from './Progress';
 export * from './Radio';
 export * from './Skeleton';
 export * from './Spin';
-export * from  './Switch';
+export * from './Switch';
 export * from './Tabs';
 export * from './Tag';
 export * from './Tooltip';
