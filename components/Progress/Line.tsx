@@ -1,4 +1,4 @@
-import React, {FC, ReactNode} from 'react';
+import {FC, ReactNode} from 'react';
 import tw, {styled} from 'twin.macro';
 
 import {ProgressProps} from './index';
@@ -17,8 +17,6 @@ export const Line: FC<LineProps> = (props) => {
   const {
     size,
     percent,
-    success,
-    strokeWidth,
     strokeColor,
     strokeLinecap,
     trailColor,

@@ -6,7 +6,7 @@ type TooltipPlacement = 'top' | 'left' | 'bottom' | 'right';
 export type RenderFunction = () => ReactNode;
 
 export interface TooltipProps {
-  color?: CSSProperties['color'];
+  color?: CSSProperties;
   children?: ReactNode;
   title?: ReactNode | RenderFunction;
   placement?: TooltipPlacement;
@@ -70,7 +70,7 @@ const getTooltipTextPosition = (placement: TooltipPlacement) => {
 //   }
 // };
 
-const ToolTipText = styled.span(({placement = 'top'}: TooltipTextProps) => [
+const ToolTipText = styled.span<TooltipTextProps>(({placement = 'top'}: TooltipTextProps) => [
   getTooltipTextPosition(placement),
   css`
     visibility: hidden;

@@ -30,7 +30,7 @@ const isError = (error: boolean) => {
   );
 };
 
-const RadioStyled = styled.input(({iserror = false}: RadioProps) => [
+const RadioStyled = styled.input<RadioProps>(({iserror = false}: RadioProps) => [
   isError(iserror),
   tw`relative invisible cursor-pointer`,
   css`
@@ -48,7 +48,7 @@ const RadioStyled = styled.input(({iserror = false}: RadioProps) => [
   `,
 ]);
 
-const Label = styled.label(({disabled}: RadioProps) => [
+const Label = styled.label<RadioProps>(({disabled}: RadioProps) => [
   tw`flex items-center absolute cursor-pointer`,
   isDisabled(disabled),
 ]);
@@ -62,7 +62,7 @@ export const Radio: FC<RadioProps> = ({
   children,
 }: RadioProps) => {
   return (
-    <Label disabled={disabled}>
+  <Label disabled={disabled}>
       <RadioStyled name={name} iserror={iserror} type="radio" />
       {children !== undefined && <Span>{children}</Span>}
     </Label>

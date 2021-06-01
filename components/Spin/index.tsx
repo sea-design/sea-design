@@ -19,7 +19,7 @@ const getSize = (size: SIZE) => {
   }
 };
 
-const SpanItem = styled.span((props: SpinProps) => [
+const SpanItem = styled.span<SpinProps>((props: SpinProps) => [
   props.size && getSize(props.size),
   tw`rounded-full border-4 border-gray-200 animate-spin`,
   css`

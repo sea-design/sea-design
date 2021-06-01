@@ -7,6 +7,6 @@ export interface SkeletonImageProps {
 
 const VirtualImage = tw.div`h-24 w-24 bg-gray-200 rounded`;
 
-export const SkeletonImage = (props: SkeletonImageProps) => {
+export const SkeletonImage = (_: SkeletonImageProps) => {
   return <VirtualImage />;
 };

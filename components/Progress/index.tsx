@@ -1,4 +1,4 @@
-import React, {FC, ReactNode} from 'react';
+import {FC, ReactNode} from 'react';
 
 import {validProgress} from './utils';
 import {Steps} from './Steps';

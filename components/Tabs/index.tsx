@@ -1,6 +1,5 @@
-import React, {FC, ReactElement, useState} from 'react';
+import {FC, ReactElement, useState} from 'react';
 import {TabTitle} from './TabTitle';
-import tw from 'twin.macro';
 
 export interface TabsProps {
   children: ReactElement[];

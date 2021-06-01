@@ -30,7 +30,7 @@ const isError = (error: boolean) => {
   );
 };
 
-const Inputstyled = styled.input(
+const Inputstyled = styled.input<InputProps>(
   ({disabled = false, iserror = false}: InputProps) => [
     isDisabled(disabled),
     tw`border-gray-400 border rounded-lg p-2 px-3 focus:outline-none focus:ring focus:border-blue-300`,

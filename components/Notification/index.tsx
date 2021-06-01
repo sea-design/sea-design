@@ -1,4 +1,4 @@
-import React, {FC, CSSProperties, ReactNode, useState, useEffect} from 'react';
+import {FC, CSSProperties, ReactNode, useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import tw, {styled} from 'twin.macro';
 

@@ -109,7 +109,7 @@ const getVisible = (visible: boolean) => {
 };
 const getShape = (shape: Shape) =>
   shape === 'rounded' ? tw`rounded-full` : tw`rounded-none`;
-const StyleTag = styled.span(
+const StyleTag = styled.span<TagProps>(
   ({color = 'blue', visible = true, shape = 'square'}: TagProps) => [
     presetColorMap[color],
     getVisible(visible),

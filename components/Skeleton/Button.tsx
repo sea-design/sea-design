@@ -20,7 +20,7 @@ const getShape = (shape: SHAPE) => {
   return finalSize[opt.indexOf(shape)];
 };
 
-const VirtualButton = styled.div(
+const VirtualButton = styled.div<SkeletonButton>(
   ({size = 'default', shape = 'round'}: SkeletonButton) => [
     tw`bg-gray-200`,
     getSize(size),

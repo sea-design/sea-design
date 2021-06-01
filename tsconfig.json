@@ -15,7 +15,9 @@
     "noImplicitAny": true,
     "target": "es6",
     "lib": ["dom", "es2017"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsxImportSource": "@emotion/react"
   },
+  "include": ["types"],
   "exclude": ["node_modules", "lib", "es"]
 }
