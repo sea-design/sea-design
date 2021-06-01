@@ -16,5 +16,4 @@ export * from './Tabs';
 export * from './Tag';
 export * from './Tooltip';
 export * from './Button';
-export * from './Input';
 export * from './Grid';
