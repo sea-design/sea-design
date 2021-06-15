@@ -18,8 +18,8 @@ jobs:
           node-version: 14
       - name: install and gen
         run: |
-          npm install
-          npm run docs
+          pnpm install
+          pnpm run docs
       - name: gendocs
         run: |
           cd docs
