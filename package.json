@@ -26,7 +26,8 @@
     "start": "start-storybook -p 6006",
     "build": "microbundle",
     "docs": "build-storybook -o docs",
-    "lint": "prettier --write ."
+    "lint": "prettier --write .",
+    "preinstall": "npx only-allow pnpm"
   },
   "repository": "https://github.com/sea-design/sea-design",
   "author": "Edward Elric <SASUKE688848@gmail.com>",
