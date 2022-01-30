@@ -1,11 +1,14 @@
 {
   "presets": [
+    "next/babel",
     "@babel/preset-env",
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
   "plugins": [
-    "babel-plugin-macros",
+    "babel-plugin-transform-inline-environment-variables",
+    "babel-plugin-twin",
+    "macros",
     [
       "@emotion/babel-plugin-jsx-pragmatic",
       {
@@ -17,7 +20,8 @@
     [
       "@babel/plugin-transform-react-jsx",
       {
-        "pragma": "__cssprop"
+        "pragma": "__cssprop",
+        "pragmaFrag": "React.Fragment"
       }
     ]
   ]
